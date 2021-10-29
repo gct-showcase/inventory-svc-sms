@@ -9,7 +9,6 @@ import java.net.MalformedURLException;
 import com.cloudant.client.api.CloudantClient;
 import com.cloudant.client.api.ClientBuilder;
 import com.cloudant.client.api.Database;
-import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Lazy;
@@ -18,7 +17,7 @@ import org.springframework.stereotype.Service;
 import com.ibm.inventory_management.config.CloudantConfig;
 import com.ibm.inventory_management.models.StockItem;
 
-@Profile("!mock")
+@Profile("cloudant")
 @Service
 public class StockItemService implements StockItemApi {
     @Bean
